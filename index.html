@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Character Selector</title>
+  <title>Module Selector</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
   <style>
     * {
@@ -14,107 +14,110 @@
 
     body {
       font-family: 'Segoe UI', sans-serif;
-      background-color: #111;
       color: #fff;
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: flex-start;
       min-height: 100vh;
+      padding: 40px 20px;
+      background: linear-gradient(-45deg, #000000, #001f3f, #000000, #001b2e);
+      background-size: 400% 400%;
+      animation: gradientBG 20s ease infinite;
     }
 
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+  
+
     h1 {
-      margin: 40px 0 20px;
-      font-size: 32px;
+      margin-top: 60px;
+      font-size: 36px;
       letter-spacing: 2px;
-      color: #fff;
       text-transform: uppercase;
-      border-bottom: 2px solid #fff;
+      border-bottom: 2px solid #00aaff;
       padding-bottom: 10px;
+      color: #00ccff;
+      text-shadow: 0 0 10px #00bfff88;
     }
 
     .card-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
       width: 90%;
-      max-width: 1000px;
-      padding: 20px;
+      max-width: 800px;
+      padding: 40px 0;
     }
 
-    .character-card {
-      background: #000;
-      border: 2px solid #fff;
-      border-radius: 15px;
+    .module-card {
+      background: rgba(0, 15, 30, 0.85);
+      border: 2px solid #00bfff;
+      border-radius: 20px;
       text-align: center;
       padding: 30px 20px;
       text-decoration: none;
       color: #fff;
-      transition: all 0.3s ease;
-      box-shadow: 0 0 10px #fff2;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      box-shadow: 0 0 15px rgba(0, 191, 255, 0.15);
+      backdrop-filter: blur(8px);
     }
 
-    .character-card:hover {
-      background: #fff;
-      color: #000;
-      transform: translateY(-5px);
-      box-shadow: 0 0 15px #fff;
+    .module-card:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 0 25px #00ccff;
+      background: rgba(0, 30, 60, 0.6);
+      color: #fff;
     }
 
-    .character-card i {
-      font-size: 36px;
-      margin-bottom: 10px;
+    .module-card i {
+      font-size: 48px;
+      margin-bottom: 15px;
+      color: #00ccff;
+      transition: transform 0.3s ease;
     }
 
-    .character-name {
-      font-size: 18px;
+    .module-card:hover i {
+      transform: scale(1.2);
+    }
+
+    .module-name {
+      font-size: 20px;
       font-weight: bold;
       text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
-    .character-type {
+    .module-desc {
       font-size: 14px;
-      margin-top: 5px;
-      letter-spacing: 1px;
-      opacity: 0.7;
+      margin-top: 8px;
+      opacity: 0.8;
     }
   </style>
 </head>
 <body>
 
-  <h1>Choose Your Character</h1>
+  
+
+  <h1>Choose a Module</h1>
 
   <div class="card-grid">
-    <a href="https://theorist18.github.io/Sugoie/" class="character-card">
-      <i class="fas fa-chess-king"></i>
-      <div class="character-name">Sugoié</div>
-      <div class="character-type">ENTJ</div>
+    <a href="https://theorist18.github.io/Sugoie/" class="module-card">
+      <i class="fas fa-circle-info"></i>
+      <div class="module-name">Info & Stats</div>
+      <div class="module-desc">Explore personality and data</div>
     </a>
-    <a href="marie.html" class="character-card">
-      <i class="fas fa-shield-alt"></i>
-      <div class="character-name">Marie</div>
-      <div class="character-type">ISTJ</div>
-    </a>
-    <a href="cashie.html" class="character-card">
-      <i class="fas fa-heart"></i>
-      <div class="character-name">Cashie</div>
-      <div class="character-type">INFP</div>
-    </a>
-    <a href="grie.html" class="character-card">
-      <i class="fas fa-fire"></i>
-      <div class="character-name">Grie</div>
-      <div class="character-type">ENFP</div>
-    </a>
-    <a href="makie.html" class="character-card">
-      <i class="fas fa-star"></i>
-      <div class="character-name">Makie</div>
-      <div class="character-type">ENFJ</div>
-    </a>
-    <a href="lordie.html" class="character-card">
-      <i class="fas fa-ghost"></i>
-      <div class="character-name">Lordie</div>
-      <div class="character-type">ISTP</div>
+    <a href="https://theorist18.github.io/Bg/" class="module-card">
+      <i class="fas fa-feather-alt"></i>
+      <div class="module-name">Origin Story</div>
+      <div class="module-desc">Discover the backstory of Soguie</div>
     </a>
   </div>
 
 </body>
 </html>
+
