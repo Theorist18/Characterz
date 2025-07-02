@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Character Selector</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #111;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    h1 {
+      margin: 40px 0 20px;
+      font-size: 32px;
+      letter-spacing: 2px;
+      color: #fff;
+      text-transform: uppercase;
+      border-bottom: 2px solid #fff;
+      padding-bottom: 10px;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      width: 90%;
+      max-width: 1000px;
+      padding: 20px;
+    }
+
+    .character-card {
+      background: #000;
+      border: 2px solid #fff;
+      border-radius: 15px;
+      text-align: center;
+      padding: 30px 20px;
+      text-decoration: none;
+      color: #fff;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 10px #fff2;
+    }
+
+    .character-card:hover {
+      background: #fff;
+      color: #000;
+      transform: translateY(-5px);
+      box-shadow: 0 0 15px #fff;
+    }
+
+    .character-card i {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .character-name {
+      font-size: 18px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .character-type {
+      font-size: 14px;
+      margin-top: 5px;
+      letter-spacing: 1px;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Choose Your Character</h1>
+
+  <div class="card-grid">
+    <a href="sugoie.html" class="character-card">
+      <i class="fas fa-chess-king"></i>
+      <div class="character-name">Sugoié</div>
+      <div class="character-type">ENTJ</div>
+    </a>
+    <a href="marie.html" class="character-card">
+      <i class="fas fa-shield-alt"></i>
+      <div class="character-name">Marie</div>
+      <div class="character-type">ISTJ</div>
+    </a>
+    <a href="cashie.html" class="character-card">
+      <i class="fas fa-heart"></i>
+      <div class="character-name">Cashie</div>
+      <div class="character-type">INFP</div>
+    </a>
+    <a href="grie.html" class="character-card">
+      <i class="fas fa-fire"></i>
+      <div class="character-name">Grie</div>
+      <div class="character-type">ENFP</div>
+    </a>
+    <a href="makie.html" class="character-card">
+      <i class="fas fa-star"></i>
+      <div class="character-name">Makie</div>
+      <div class="character-type">ENFJ</div>
+    </a>
+    <a href="lordie.html" class="character-card">
+      <i class="fas fa-ghost"></i>
+      <div class="character-name">Lordie</div>
+      <div class="character-type">ISTP</div>
+    </a>
+  </div>
+
+</body>
+</html>
